@@ -26,9 +26,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         currentValue = lroundf(slider.value)
-        startNewRound()
+        startNewGame()
     }
-
+    
+    @IBAction func startNewGame() {
+        score = 0
+        round = 0
+        startNewRound()
+        
+    }
+    
     func startNewRound() {
         targetValue = 1 + Int(arc4random_uniform(100))
         currentValue = 50
@@ -77,7 +84,10 @@ class ViewController: UIViewController {
             let message = ("current value is \(currentValue)" + "\n the target is \(targetValue)" + "\n points \(difference)")
             
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            let action = UIAlertAction(title: "awesome", style: .default, handler: nil)
+            let action = UIAlertAction(title: "awesome", style: .default, handler: {
+                action in
+                self.startNewRound()
+            })
             
             alert.addAction(action)
                 
@@ -85,9 +95,11 @@ class ViewController: UIViewController {
             
             present(alert, animated: true, completion: nil)
             
-            startNewRound()
             
     }
+    
+    
+    
     func updateLabels() {
         targetLabel.text = String(targetValue)
         scoreLabel.text = String(score)
