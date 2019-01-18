@@ -110,7 +110,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="roundLabel" destination="JsW-gj-Rb6" id="Juc-Aq-ej1"/>
+                        <outlet property="scoreLabel" destination="jfd-HY-GZ3" id="8J6-Fh-GOK"/>
                         <outlet property="slider" destination="U9M-Xu-fVq" id="H0l-pF-Gxp"/>
+                        <outlet property="targetLabel" destination="DIE-z4-neK" id="n4Y-Eb-ZmF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
