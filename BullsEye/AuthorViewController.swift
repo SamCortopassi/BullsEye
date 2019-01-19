@@ -1,5 +1,5 @@
 //
-//  AboutViewController.swift
+//  AuthorViewController.swift
 //  BullsEye
 //
 //  Created by Samantha Cortopassi on 1/18/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutViewController: UIViewController {
+class AuthorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,9 +16,9 @@ class AboutViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func back() {
+    @IBAction func goBack() {
         dismiss(animated: true, completion: nil)
     }
-   
+    
 
 }

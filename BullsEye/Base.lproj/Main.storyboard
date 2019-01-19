@@ -153,15 +153,15 @@
             </objects>
             <point key="canvasLocation" x="-822" y="-384"/>
         </scene>
-        <!--View Controller-->
+        <!--About View Controller-->
         <scene sceneID="giz-f2-uRU">
             <objects>
-                <viewController id="ggK-pI-bmK" sceneMemberID="viewController">
+                <viewController id="ggK-pI-bmK" customClass="AboutViewController" customModule="BullsEye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ma-b9-agE">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IT6-Lf-rab">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IT6-Lf-rab">
                                 <rect key="frame" x="20" y="20" width="528" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -177,13 +177,16 @@ Welcome to the awesome game og Bull's Eye where you can win points and fame by d
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <action selector="goBack:" destination="ru1-Ht-1B8" eventType="touchUpInside" id="Fsa-qJ-Pqc"/>
+                                    <action selector="back" destination="ggK-pI-bmK" eventType="touchUpInside" id="CTU-Qu-Wos"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSv-Ol-k4n">
                                 <rect key="frame" x="431" y="270" width="117" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="About the author"/>
+                                <connections>
+                                    <segue destination="Btt-SW-uye" kind="presentation" modalTransitionStyle="coverVertical" id="A0t-ju-iMX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -191,14 +194,13 @@ Welcome to the awesome game og Bull's Eye where you can win points and fame by d
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LsZ-f6-BgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="ru1-Ht-1B8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-127.8169014084507" y="-401.25"/>
         </scene>
-        <!--View Controller-->
+        <!--Author View Controller-->
         <scene sceneID="5Ha-xb-3eJ">
             <objects>
-                <viewController id="Btt-SW-uye" sceneMemberID="viewController">
+                <viewController id="Btt-SW-uye" customClass="AuthorViewController" customModule="BullsEye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9j9-3l-wMA">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,6 +209,9 @@ Welcome to the awesome game og Bull's Eye where you can win points and fame by d
                                 <rect key="frame" x="26" y="270" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="goBack" destination="Btt-SW-uye" eventType="touchUpInside" id="Pmv-sA-RHQ"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UNADJUSTEDNONRAW_thumb_c47a" translatesAutoresizingMaskIntoConstraints="NO" id="TuB-Mj-Nra">
                                 <rect key="frame" x="164" y="78" width="260" height="182"/>
@@ -226,7 +231,7 @@ Welcome to the awesome game og Bull's Eye where you can win points and fame by d
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vP-lb-MKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-134.1549295774648" y="421.875"/>
+            <point key="canvasLocation" x="269" y="422"/>
         </scene>
     </scenes>
     <resources>
