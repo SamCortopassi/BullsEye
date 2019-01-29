@@ -39,6 +39,10 @@ class ViewController: UIViewController {
         let trackLeftImage = #imageLiteral(resourceName: "button 2")
         let trackLeftResizable = trackLeftImage.resizableImage(withCapInsets: insets)
         slider.setMinimumTrackImage(trackLeftImage, for: .normal)
+        
+        let trackRightImage = #imageLiteral(resourceName: "Button Gray")
+        let trackRightResizable = trackRightImage.resizableImage(withCapInsets: insets)
+        slider.setMaximumTrackImage(trackRightImage, for: .normal)
     }
     
     @IBAction func startNewGame() {
