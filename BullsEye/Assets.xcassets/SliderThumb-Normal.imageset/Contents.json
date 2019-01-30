@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "bullseye dark.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "SliderThumb-Normal@2x.png",
       "scale" : "2x"
     },
     {
